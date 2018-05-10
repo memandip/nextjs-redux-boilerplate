@@ -12,25 +12,15 @@ class Index extends React.Component {
         datas:[]
     }
 
-    // static async getInitialProps() {
-    //     const req = await fetch(`https://api.hackerwebapp.com/news`);
-    //     const stories = await req.json();
-    //     return { news : {
-    //         news: stories
-    //     } };
-    // }
-
-    async logStore(){
-        const req = await fetch(`https://api.hackerwebapp.com/news`);
-        const stories = await req.json();
-        this.props.dispatch(fetchNews(stories));
+    getData = () => {
+        this.props.dispatch(fetchNews());
     }
 
     render() {
         return (
             <Layout title={"Latest news"}>
                 <h1>Latest news</h1>
-                <button onClick={() => this.logStore()}>Fetch hacker news</button>
+                <button onClick={this.getData}>Fetch hacker news</button>
                 <NewsList />
             </Layout>
         )

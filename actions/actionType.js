@@ -1,7 +1,4 @@
-const FETCH_NEWS = 'fetch news';
-const ADD_NEWS = 'add news';
-
-export {
-    ADD_NEWS,
-    FETCH_NEWS
-};
+export const FETCH_NEWS = 'FETCH_NEWS';
+export const FETCH_NEWS_SUCCESS = 'FETCH_NEWS_SUCCESS';
+export const FETCH_NEWS_ERROR = 'FETCH_NEWS_ERROR';
+export const ADD_NEWS = 'ADD_NEWS';

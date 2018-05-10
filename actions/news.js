@@ -7,9 +7,12 @@ export function addNews(news){
     }
 }
 
-export function fetchNews(news){
+export function fetchNews(url){
+    url = url && url.length > 0 ? url : 'https://api.hackerwebapp.com/news';
     return {
         type:FETCH_NEWS,
-        payload:news
+        request:{
+            url: url
+        }
     };
 }
