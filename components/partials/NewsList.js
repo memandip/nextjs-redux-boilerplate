@@ -8,7 +8,7 @@ class NewsList extends Component{
         let { news } = this.props;
         return (
             <div>
-                { news && news.news && news.news.map((story) => (
+                { news && news.news && news.news.slice(15,30).map((story) => (
                     <div key={story.id}>
                         <h2><a href={ story.url }>{ story.title }</a></h2>
                         <p><Link href={ `/story?id=${story.id}` }><a>
